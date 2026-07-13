@@ -155,7 +155,7 @@ export default function Hero() {
             variants={itemVariants}
             className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight"
           >
-            Dig. Sylendra Babu <span className="gold-gradient-text block">IPS</span>
+            Dr. Sylendra Babu <span className="gold-gradient-text block">IPS</span>
           </motion.h1>
 
           {/* Typing/Rotating Roles Showcase */}
