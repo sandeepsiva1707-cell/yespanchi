@@ -113,9 +113,9 @@ export default function About() {
               National Honors & Recognitions
             </h4>
             <p className="font-poppins text-xs sm:text-sm text-gray-300 leading-relaxed max-w-3xl">
-              Honored with the **Prime Minister’s Medal for Life Saving** for acts of conspicuous bravery, 
-              the **President’s Police Medal for Distinguished Service**, the **President’s Police Medal for Meritorious Service**, 
-              and the **Chief Minister’s Police Medal for Gallantry**.
+              He has been honored with the Prime Minister’s Medal for Life Saving for acts of conspicuous bravery, 
+              the President’s Police Medal for Distinguished Service, the President’s Police Medal for Meritorious Service, 
+              and the Chief Minister’s Police Medal for Gallantry.
             </p>
           </div>
           <div className="flex gap-4 items-center shrink-0">
