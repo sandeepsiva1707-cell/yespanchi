@@ -195,7 +195,7 @@ export default function Books() {
               className="glass-card rounded-2xl overflow-hidden cursor-pointer group flex flex-col h-full hover:border-gold/40 transition-all duration-300"
             >
               {/* Book Spine / Cover Mockup (3D styled container) */}
-              <div className={`relative h-60 bg-gradient-to-br ${book.gradient} p-8 flex flex-col justify-between border-b border-gold/10`}>
+              <div className={`relative h-56 bg-gradient-to-br ${book.gradient} p-8 flex flex-col justify-between border-b border-gold/10`}>
                 <div className="absolute inset-0 bg-black/10 opacity-60 group-hover:opacity-20 transition-opacity duration-300" />
                 
                 {/* Book Texture spine shadow */}
@@ -226,16 +226,53 @@ export default function Books() {
               </div>
 
               {/* Book Details Summary */}
-              <div className="p-6 flex-1 flex flex-col">
-                <p className="font-poppins text-xs text-gray-300 leading-relaxed mb-6 flex-1">
-                  {book.description}
-                </p>
-                <div className="mt-auto">
-                  <div
-                    className="w-full py-3 rounded-xl bg-gold hover:bg-gold-hover text-primary font-poppins font-bold text-xs uppercase tracking-widest transition-colors shadow-lg shadow-gold/15 flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    Purchase Book
-                    <ExternalLink size={12} />
+              <div className="p-6 flex-1 flex flex-col space-y-5">
+                {/* What is the Book */}
+                <div>
+                  <h4 className="text-[9px] font-poppins uppercase tracking-[0.25em] text-gold font-bold mb-1.5">
+                    What is the book
+                  </h4>
+                  <p className="font-poppins text-xs text-gray-300 leading-relaxed">
+                    {book.description}
+                  </p>
+                </div>
+
+                {/* Advantages */}
+                <div>
+                  <h4 className="text-[9px] font-poppins uppercase tracking-[0.25em] text-gold font-bold mb-2">
+                    Core Advantages
+                  </h4>
+                  <ul className="space-y-1.5">
+                    {book.lessons.map((lesson, lessonIdx) => (
+                      <li key={lessonIdx} className="flex items-start gap-2">
+                        <CheckCircle2 size={13} className="text-gold shrink-0 mt-0.5" />
+                        <span className="font-poppins text-xs text-gray-200 leading-snug">
+                          {lesson}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Buy Options */}
+                <div className="mt-auto pt-4 border-t border-white/5">
+                  <h4 className="text-[9px] font-poppins uppercase tracking-[0.25em] text-gray-400 font-bold mb-2">
+                    Redirect to Store
+                  </h4>
+                  <div className="flex gap-2.5">
+                    {book.purchaseOptions.map((opt, optIdx) => (
+                      <a
+                        key={optIdx}
+                        href={opt.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="px-3.5 py-2.5 rounded-lg bg-secondary/40 border border-gold/15 hover:border-gold hover:bg-gold/10 hover:text-gold text-white font-poppins font-medium text-[10px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-1.5 flex-1 text-center cursor-pointer shadow-md"
+                      >
+                        <span>{opt.storeName}</span>
+                        <ExternalLink size={8} />
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>

@@ -120,13 +120,6 @@ export default function Footer() {
               >
                 Companies & Roles
               </a>
-              <a
-                href="#contact"
-                onClick={(e) => handleLinkClick(e, "contact")}
-                className="font-poppins text-xs text-gray-400 hover:text-gold transition-colors"
-              >
-                Contact Secretariat
-              </a>
             </div>
           </div>
         </div>

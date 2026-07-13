@@ -14,7 +14,6 @@ const navLinks = [
   { name: "Leadership", href: "#leadership" },
   { name: "Strategic Advisory", href: "#advisory" },
   { name: "Companies", href: "#companies" },
-  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {

@@ -8,7 +8,6 @@ import Tedx from "@/components/Tedx";
 import Leadership from "@/components/Leadership";
 import Advisory from "@/components/Advisory";
 import Companies from "@/components/Companies";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -28,7 +27,6 @@ export default function Home() {
         <Leadership />
         <Advisory />
         <Companies />
-        <Contact />
       </main>
 
       {/* Footer with branding & credits */}
