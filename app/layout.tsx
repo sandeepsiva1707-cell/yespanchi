@@ -17,18 +17,19 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Sylendra Babu IPS | Official Website | Author & Leadership Mentor",
-  description: "Official website of Dr. C. Sylendra Babu, Former DGP & Head of Police Force, Tamil Nadu, Author, TEDx Speaker, Leadership Mentor, and Governance Expert.",
+  metadataBase: new URL("https://sylendrababu.com"),
+  title: "Dig. Sylendra Babu | Official Website | Author & Leadership Mentor",
+  description: "Official website of Dig. Sylendra Babu, former DGP of Tamil Nadu, author, TEDx speaker, leadership mentor, and governance expert.",
   keywords: ["Sylendra Babu", "DGP Sylendra Babu", "IPS Sylendra Babu", "Tamil Nadu Police", "Officers IAS Academy", "Udalinai Urudhi Sei", "Motivational Speaker", "Leadership Mentor", "Corporate Governance"],
-  authors: [{ name: "Dr. Sylendra Babu" }],
+  authors: [{ name: "Dig. Sylendra Babu" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Dr. Sylendra Babu IPS | Official Website",
-    description: "Official website of Dr. C. Sylendra Babu, Former DGP, Tamil Nadu, Author, TEDx Speaker, and Leadership Mentor.",
+    title: "Dig. Sylendra Babu | Official Website",
+    description: "Official website of Dig. Sylendra Babu, former DGP, Tamil Nadu, author, TEDx speaker, and leadership mentor.",
     url: "https://sylendrababu.com",
-    siteName: "Dr. Sylendra Babu Official",
+    siteName: "Dig. Sylendra Babu Official",
     images: [
       {
         url: "/images/hero-portrait.jpg",
