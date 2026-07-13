@@ -23,7 +23,7 @@ export default function Logo({ className = "", size = 48 }: LogoProps) {
       </div>
       <div className="flex flex-col">
         <span className="font-playfair text-lg font-bold tracking-widest text-glow text-white leading-none">
-          D. SYLENDRA BABU
+          DR. SYLENDRA BABU
         </span>
         <span className="font-poppins text-[10px] tracking-[0.25em] text-gold uppercase mt-0.5 leading-none">
           Official Executive

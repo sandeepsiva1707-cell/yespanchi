@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="md:col-span-5 space-y-6">
             <div className="flex flex-col">
               <span className="font-playfair text-xl font-bold tracking-widest text-glow text-white leading-none">
-                D. SYLENDRA BABU
+                DR. SYLENDRA BABU
               </span>
               <span className="font-poppins text-[10px] tracking-[0.25em] text-gold uppercase mt-1.5 leading-none">
                 Official Executive
