@@ -113,7 +113,7 @@ export default function About() {
               National Honors & Recognitions
             </h4>
             <p className="font-poppins text-xs sm:text-sm text-gray-300 leading-relaxed max-w-3xl">
-              He has been honored with the Prime Minister’s Medal for Life Saving for acts of conspicuous bravery, 
+              Honored with the Prime Minister’s Medal for Life Saving for acts of conspicuous bravery, 
               the President’s Police Medal for Distinguished Service, the President’s Police Medal for Meritorious Service, 
               and the Chief Minister’s Police Medal for Gallantry.
             </p>
