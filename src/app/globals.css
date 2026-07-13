@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-primary: #071C36;
+  --color-secondary: #0b294f;
+  --color-gold: #C9A227;
+  --color-gold-hover: #dfb943;
+  --color-gold-dark: #9c7b1b;
+  --color-navy-deep: #030d1a;
+  
+  --font-playfair: var(--font-playfair);
+  --font-poppins: var(--font-poppins);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 8s ease-in-out infinite;
+  --animate-gradient: gradient-x 15s ease infinite;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.15; transform: scale(1); }
+    50% { opacity: 0.25; transform: scale(1.1); }
+  }
+  @keyframes gradient-x {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
 }
 
+:root {
+  --background: #071C36;
+  --foreground: #ffffff;
+  --font-playfair: 'Playfair Display', serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+/* Custom resets and scroll behavior */
+html {
+  scroll-behavior: smooth;
+  background-color: #071C36;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #071C36;
+  color: #ffffff;
+  font-family: var(--font-poppins);
+  overflow-x: hidden;
+}
+
+/* Luxury Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030d1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A227;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dfb943;
+}
+
+/* Glassmorphism Luxury Utilities */
+.glass-card {
+  background: rgba(11, 41, 79, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(3, 13, 26, 0.37);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(201, 162, 39, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(201, 162, 39, 0.15);
+  transform: translateY(-5px);
+}
+
+.glass-nav {
+  background: rgba(7, 28, 54, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+}
+
+/* Gradient Background Animation */
+.gradient-bg {
+  background: linear-gradient(-45deg, #071C36, #0b294f, #030d1a, #0b294f);
+  background-size: 400% 400%;
+  animation: gradient-x 15s ease infinite;
+}
+
+/* Text glow effect */
+.text-glow {
+  text-shadow: 0 0 10px rgba(201, 162, 39, 0.3);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF 30%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide default scrollbar for slider elements */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom styles for Journey Timeline */
+.timeline-line {
+  background: linear-gradient(to bottom, #C9A227 0%, rgba(201, 162, 39, 0.1) 100%);
 }
